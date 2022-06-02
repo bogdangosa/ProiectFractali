@@ -1,38 +1,33 @@
 .App {
-  text-align: center;
+  width:100%;
+  box-sizing: border-box;
+  padding: 1rem 3rem 0 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Titlu{
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 3rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Text{
+  width: 50%;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  padding-bottom: 3rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.setfractaldiv{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.setfractalbtn{
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.setfractalbtn:hover{
+  transition: 1s;
+  color: var(--color-accent);
 }
