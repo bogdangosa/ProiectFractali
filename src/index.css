@@ -2,6 +2,7 @@
   --color-background: #122A32;
   --color-text: #fff;
   --color-accent:#8DE2FD;
+  --color-accent2:#48df34;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--color-background);
+  overflow-y: scroll;
 }
 
 code {
@@ -20,4 +22,27 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--color-accent);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent2);
 }

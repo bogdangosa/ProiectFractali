@@ -12,8 +12,8 @@ function Sierpinsky(props) {
             return;
         const canvas = canvasRef.current
         const context = canvas.getContext('2d')
-        context.canvas.width = width*2/3;
-        context.canvas.height = height*2/3;
+        context.canvas.width = width*3/4;
+        context.canvas.height = height;
         
         context.fillStyle = '#8DE2FD';
 
@@ -30,7 +30,7 @@ function Sierpinsky(props) {
 
         context.setTransform(1, 0, 0, 1, 0, 0);
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.translate(width/3,height/3);  
+        context.translate(width*3/8,height/2);  
         console.log(fractal_limit)
         SierPinski(context,p1,p2,p3,fractal_limit);
 
@@ -76,7 +76,7 @@ function Sierpinsky(props) {
 
   return (
     <div className="Sierpinsky">
-        <input className="Input" type="number" value={fractal_limit} onChange={(e)=>{if(e.target.value<12)setfractal_limit(e.target.value)}}/>
+        <input className="Input" type="number" value={fractal_limit} onChange={(e)=>{if(e.target.value<12 && e.target.value>=0)setfractal_limit(e.target.value)}}/>
         <canvas className="canvas" ref={canvasRef}></canvas>
 
     </div>

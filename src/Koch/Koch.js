@@ -11,8 +11,8 @@ function Koch(props) {
     useEffect(() => {
         const canvas = canvasRef.current
         const context = canvas.getContext('2d')
-        context.canvas.width = width*2/3;
-        context.canvas.height = height*2/3;
+        context.canvas.width = width*3/4;
+        context.canvas.height = height;
         
         context.fillStyle = '#8DE2FD';
 
@@ -29,7 +29,7 @@ function Koch(props) {
 
         context.setTransform(1, 0, 0, 1, 0, 0);
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.translate(width/3,height/3);  
+        context.translate(width*3/8,height/2);  
         
         koch(context,p1,p2,fractal_limit);
         koch(context,p2,p3,fractal_limit);
@@ -80,7 +80,7 @@ function Koch(props) {
   return (
     <div className="Koch">
         
-        <input className="Input" type="number" value={fractal_limit} onChange={(e)=>{if(e.target.value<7)setfractal_limit(e.target.value)}}/>
+        <input className="Input" type="number" value={fractal_limit} onChange={(e)=>{if(e.target.value<7&& e.target.value>=0)setfractal_limit(e.target.value)}}/>
         <canvas className="canvas" ref={canvasRef}></canvas>
     </div>
   );

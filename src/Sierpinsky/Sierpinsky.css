@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 70vh;
+    min-height: 90vh;
 }
 
 .Input{
@@ -17,7 +17,3 @@
     padding: 0;
 }
 
-
-.canvas{
-
-}

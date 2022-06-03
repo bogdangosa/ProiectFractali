@@ -6,12 +6,25 @@
 
 .Titlu{
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-text);
   margin-bottom: 3rem;
 }
+
+.TopContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.video{
+  margin-top: 3rem;
+  margin-right: 5rem;
+}
+
+
 .Text{
-  width: 50%;
+  width: 40%;
   font-weight: 300;
   font-size: 1.2rem;
   color: var(--color-text);
