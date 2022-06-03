@@ -32,14 +32,31 @@
 }
 .setfractaldiv{
   display: flex;
+  padding-bottom:1rem;
 }
 
 .setfractalbtn{
   padding: 0 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
+  margin:0;
   color: var(--color-text);
 }
+
+.underline{
+  margin-top: 0.3rem;
+  width:100%;
+  height: 3px;
+  background-color: #fff;
+  opacity: 1;
+  transition: 0.5s;
+  border-radius:1rem;
+}
+.invisible{
+  opacity: 0;
+}
+
+
 .setfractalbtn:hover{
   transition: 1s;
   color: var(--color-accent);

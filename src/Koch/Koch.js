@@ -14,7 +14,8 @@ function Koch(props) {
         context.canvas.width = width*3/4;
         context.canvas.height = height;
         
-        context.fillStyle = '#8DE2FD';
+        context.strokeStyle = '#8DE2FD';
+        context.lineWidth = 1;
 
         let p1={
             x:0,
@@ -66,7 +67,7 @@ function Koch(props) {
 			koch(context,pC, p2, limit - 1);
 		}
 		else {
-            context.fillStyle = '#8DE2FD';
+            context.strokeStyle = '#8DE2FD';
 			context.beginPath();
 			context.moveTo(p1.x, p1.y);
 			context.lineTo(pA.x, pA.y);
